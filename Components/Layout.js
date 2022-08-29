@@ -23,10 +23,10 @@ export default function Layout({ children }) {
           href="index.html"
         >
           <div className="sidebar-brand-icon rotate-n-15">
-            <i className="fas fa-laugh-wink"></i>
+            
           </div>
           <div className="sidebar-brand-text mx-3">
-            SB Admin <sup>2</sup>
+            PV SMS
           </div>
         </a>
 
@@ -81,20 +81,132 @@ export default function Layout({ children }) {
         </div>
       </ul>
 
-      {children}
+      <div id="content-wrapper" className="d-flex flex-column">
+        <div id="content">
+          <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <button
+              id="sidebarToggleTop"
+              className="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i className="fa fa-bars"></i>
+            </button>
 
-      <script src="../assets/vendor/jquery/jquery.min.js"></script>
+            <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control bg-light border-0 small"
+                  placeholder="Search for..."
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
+                <div className="input-group-append">
+                  <button className="btn btn-primary" type="button">
+                    <i className="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
 
-      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item dropdown no-arrow d-sm-none">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i className="fas fa-search fa-fw"></i>
+                </a>
+                <div
+                  className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown"
+                >
+                  <form className="form-inline mr-auto w-100 navbar-search">
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        className="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div className="input-group-append">
+                        <button className="btn btn-primary" type="button">
+                          <i className="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
 
-      <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+              <div className="topbar-divider d-none d-sm-block"></div>
 
-      <script src="../assets/js/sb-admin-2.min.js"></script>
+              <li className="nav-item dropdown no-arrow">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span className="mr-2 d-none d-lg-inline text-gray-600 small">
+                    Mir Misbah Ali
+                  </span>
+                  <img
+                    className="img-profile rounded-circle"
+                    src="/assets/img/undraw_profile.svg"
+                  />
+                </a>
+                <div
+                  className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <a className="dropdown-item" href="#">
+                    <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a className="dropdown-item" href="#">
+                    <i className="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+ 
+                  <div className="dropdown-divider"></div>
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div className="container-fluid">{children}</div>
+        </div>
+      </div>
 
-      <script src="../assets/vendor/chart.js/Chart.min.js"></script>
+      <script src="/assets/vendor/jquery/jquery.min.js"></script>
 
-      <script src="../assets/js/demo/chart-area-demo.js"></script>
-      <script src="../assets/js/demo/chart-pie-demo.js"></script>
+      <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <script src="/assets/js/sb-admin-2.min.js"></script>
+
+      <script src="/assets/vendor/chart.js/Chart.min.js"></script>
+
+      <script src="/assets/js/demo/chart-area-demo.js"></script>
+      <script src="/assets/js/demo/chart-pie-demo.js"></script>
     </div>
   );
 }

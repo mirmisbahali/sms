@@ -13,6 +13,12 @@ export default function Layout({ children }) {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+          crossorigin="anonymous"
+        />
       </Head>
       <ul
         className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
@@ -22,12 +28,8 @@ export default function Layout({ children }) {
           className="sidebar-brand d-flex align-items-center justify-content-center"
           href="index.html"
         >
-          <div className="sidebar-brand-icon rotate-n-15">
-            
-          </div>
-          <div className="sidebar-brand-text mx-3">
-            PV SMS
-          </div>
+          <div className="sidebar-brand-icon rotate-n-15"></div>
+          <div className="sidebar-brand-text mx-3">PV SMS</div>
         </a>
 
         <hr className="sidebar-divider my-0" />
@@ -176,7 +178,7 @@ export default function Layout({ children }) {
                     <i className="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Settings
                   </a>
- 
+
                   <div className="dropdown-divider"></div>
                   <a
                     className="dropdown-item"
@@ -207,6 +209,8 @@ export default function Layout({ children }) {
 
       <script src="/assets/js/demo/chart-area-demo.js"></script>
       <script src="/assets/js/demo/chart-pie-demo.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     </div>
   );
 }

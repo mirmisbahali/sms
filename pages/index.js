@@ -78,7 +78,10 @@ export default function Home() {
         </div>
       </div>
       <div className="row">
-        <div className="col">
+        <div className="col-xl-4 col-lg-5">
+
+        </div>
+        <div className="col-xl-8 col-lg-7">
           <div className="accordion" id="accordionPanelsStayOpenExample">
             <div className="accordion-item">
               <h2 className="accordion-header" id="panelsStayOpen-headingOne">
@@ -90,7 +93,7 @@ export default function Home() {
                   aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseOne"
                 >
-                  Accordion Item #1
+                  AUR3 - Certificate III in Light Vechicle Mechanical Technology
                 </button>
               </h2>
               <div
@@ -99,77 +102,89 @@ export default function Home() {
                 aria-labelledby="panelsStayOpen-headingOne"
               >
                 <div className="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                <h4 className="small font-weight-bold">
+                      16 Sep 2022 <span className="float-right">15 Sep 2023</span>
+                    </h4>
+                    <div className="progress mb-4">
+                      <div
+                        className="progress-bar bg-danger"
+                        role="progressbar"
+                        style={{width: "20%"}}
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
                 </div>
               </div>
             </div>
             <div className="accordion-item">
               <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
                 <button
-                  className="accordion-button collapsed"
+                  className="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseTwo"
                 >
-                  Accordion Item #2
+                  AUR4 - Certificate IV in Mechanical Diagnosis
                 </button>
               </h2>
               <div
                 id="panelsStayOpen-collapseTwo"
-                className="accordion-collapse collapse"
+                className="accordion-collapse collapse show"
                 aria-labelledby="panelsStayOpen-headingTwo"
               >
                 <div className="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                <h4 className="small font-weight-bold">
+                      16 Sep 2022 <span className="float-right">15 Sep 2023</span>
+                    </h4>
+                    <div className="progress mb-4">
+                      <div
+                        className="progress-bar bg-danger"
+                        role="progressbar"
+                        style={{width: "20%"}}
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
                 </div>
               </div>
             </div>
             <div className="accordion-item">
               <h2 className="accordion-header" id="panelsStayOpen-headingThree">
                 <button
-                  className="accordion-button collapsed"
+                  className="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseThree"
                 >
-                  Accordion Item #3
+                  AUR5 - Diploma of Automotive Technology
                 </button>
               </h2>
               <div
                 id="panelsStayOpen-collapseThree"
-                className="accordion-collapse collapse"
+                className="accordion-collapse collapse show"
                 aria-labelledby="panelsStayOpen-headingThree"
               >
                 <div className="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                <h4 className="small font-weight-bold">
+                      16 Sep 2022 <span className="float-right">15 Sep 2023</span>
+                    </h4>
+                    <div className="progress mb-4">
+                      <div
+                        className="progress-bar bg-danger"
+                        role="progressbar"
+                        style={{width: "20%"}}
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
                 </div>
               </div>
             </div>

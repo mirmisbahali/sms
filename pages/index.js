@@ -1,5 +1,7 @@
 import Head from "next/head";
-import ComLog from "../Components/ComLog"
+import ComLog from "../Components/ComLog";
+import Enrollments from "../Components/Enrollments";
+import UserDetails from "../Components/UserDetails";
 
 export default function Home() {
   return (
@@ -10,186 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <UserDetails />
       <div className="row">
-        <div className="col-xl-4 col-lg-5">
-          <div className="card mb-4">
-            <div className="card-body text-center">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
-                alt="avatar"
-                className="rounded-circle img-fluid"
-                style={{ width: "150px" }}
-              />
-              <h5 className="my-3">John Smith</h5>
-              <p className="text-muted mb-1">Full Stack Developer</p>
-              <p className="text-muted mb-4">Bay Area, San Francisco, CA</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-xl-8 col-lg-7">
-          <div className="card mb-4">
-            <div className="card-body">
-              <div className="row">
-                <div className="col-sm-3">
-                  <p className="mb-0">Full Name</p>
-                </div>
-                <div className="col-sm-9">
-                  <p className="text-muted mb-0">Johnatan Smith</p>
-                </div>
-              </div>
-              <hr />
-              <div className="row">
-                <div className="col-sm-3">
-                  <p className="mb-0">Email</p>
-                </div>
-                <div className="col-sm-9">
-                  <p className="text-muted mb-0">example@example.com</p>
-                </div>
-              </div>
-              <hr />
-              <div className="row">
-                <div className="col-sm-3">
-                  <p className="mb-0">Phone</p>
-                </div>
-                <div className="col-sm-9">
-                  <p className="text-muted mb-0">(097) 234-5678</p>
-                </div>
-              </div>
-              <hr />
-              <div className="row">
-                <div className="col-sm-3">
-                  <p className="mb-0">Mobile</p>
-                </div>
-                <div className="col-sm-9">
-                  <p className="text-muted mb-0">(098) 765-4321</p>
-                </div>
-              </div>
-              <hr />
-              <div className="row">
-                <div className="col-sm-3">
-                  <p className="mb-0">Address</p>
-                </div>
-                <div className="col-sm-9">
-                  <p className="text-muted mb-0">Bay Area, San Francisco, CA</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xl-4 col-lg-5 scrollbar scrollbar-primary" >
+        <div className="col-xl-4 col-lg-5 scrollbar scrollbar-primary">
           <ComLog />
         </div>
         <div className="col-xl-8 col-lg-7">
-          <div className="accordion" id="accordionPanelsStayOpenExample">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingOne">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  AUR3 - Certificate III in Light Vechicle Mechanical Technology
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                className="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingOne"
-              >
-                <div className="accordion-body">
-                  <h4 className="small font-weight-bold">
-                    16 Sep 2022 <span className="float-right">15 Sep 2023</span>
-                  </h4>
-                  <div className="progress mb-4">
-                    <div
-                      className="progress-bar bg-danger"
-                      role="progressbar"
-                      style={{ width: "20%" }}
-                      aria-valuenow="20"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseTwo"
-                >
-                  AUR4 - Certificate IV in Mechanical Diagnosis
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseTwo"
-                className="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingTwo"
-              >
-                <div className="accordion-body">
-                  <h4 className="small font-weight-bold">
-                    16 Sep 2022 <span className="float-right">15 Sep 2023</span>
-                  </h4>
-                  <div className="progress mb-4">
-                    <div
-                      className="progress-bar bg-danger"
-                      role="progressbar"
-                      style={{ width: "20%" }}
-                      aria-valuenow="20"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingThree">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseThree"
-                >
-                  AUR5 - Diploma of Automotive Technology
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseThree"
-                className="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingThree"
-              >
-                <div className="accordion-body">
-                  <h4 className="small font-weight-bold">
-                    16 Sep 2022 <span className="float-right">15 Sep 2023</span>
-                  </h4>
-                  <div className="progress mb-4">
-                    <div
-                      className="progress-bar bg-danger"
-                      role="progressbar"
-                      style={{ width: "20%" }}
-                      aria-valuenow="20"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Enrollments />
         </div>
       </div>
     </>

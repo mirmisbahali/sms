@@ -1,4 +1,17 @@
+import Link from "next/link";
+import { useAuth } from "../context/AuthContext";
+
 export default function login() {
+  const { googleSignIn } = useAuth();
+
+  const handleSignIn = async () => {
+    try {
+      await googleSignIn();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -13,20 +26,19 @@ export default function login() {
                       <div className="text-center">
                         <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
                       </div>
-                      <form className="user">
-                        <a
-                          href="index.html"
-                          className="btn btn-google btn-user btn-block"
-                        >
-                          <i className="fab fa-google fa-fw"></i> Login with
-                          Google
-                        </a>
-                      </form>
+
+                      <button
+                        onClick={handleSignIn}
+                        className="btn btn-google btn-user btn-block"
+                      >
+                        <i className="fab fa-google fa-fw"></i> Login with
+                        Google
+                      </button>
                       <hr />
                       <div className="text-center">
-                        <a className="small" href="register.html">
-                          Create an Account!
-                        </a>
+                        <Link href="signup">
+                          <a className="small">Create an Account!</a>
+                        </Link>
                       </div>
                     </div>
                   </div>

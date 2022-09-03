@@ -4,7 +4,7 @@ export default function ComLog() {
   const text3 = "Class call: He said he won't be able to attend tomorrow's class as he is sick. He want to reschedule his class to next weekend"
   return (
     <>
-      <div class="list-group overflow-auto scrollbar" style={{ height: "480px" }}>
+      <div className="list-group overflow-auto scrollbar" style={{ height: "480px" }}>
         <Message author="Misbah" msg={text} date="28/08/2022" />
         <Message author="Misbah" msg={text2} date="28/08/2022" />
         <Message author="Misbah" msg={text3} date="28/08/2022" />
@@ -26,15 +26,15 @@ function Message({author, msg, date}) {
     <>
       <div
         
-        class="list-group-item list-group-item-action mb-1"
+        className="list-group-item list-group-item-action mb-1"
         aria-current="true"
       >
-        <div class="d-flex w-100 justify-content-between">
-          <h6 class="mb-1">{author}</h6>
+        <div className="d-flex w-100 justify-content-between">
+          <h6 className="mb-1">{author}</h6>
           <small>3 days ago</small>
         </div>
         <hr/>
-        <p class="mb-1">{msg}</p>
+        <p className="mb-1">{msg}</p>
         <small className="float-right">{date}</small>
       </div>
     </>

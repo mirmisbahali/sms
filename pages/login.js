@@ -1,16 +1,27 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
+import { useEffect } from "react";
 
 export default function login() {
-  const { googleSignIn } = useAuth();
+  const { googleSignIn, user } = useAuth();
+  const router = useRouter();
 
-  const handleSignIn = async () => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
     try {
       await googleSignIn();
-    } catch (e) {
-      console.log(e);
+
+    } catch(e) {
+      console.log(e)
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      router.push("/");
+    }
+  }, []);
 
   return (
     <>
@@ -26,14 +37,12 @@ export default function login() {
                       <div className="text-center">
                         <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
                       </div>
-
-                      <button
-                        onClick={handleSignIn}
-                        className="btn btn-google btn-user btn-block"
-                      >
-                        <i className="fab fa-google fa-fw"></i> Login with
-                        Google
-                      </button>
+                      <form onSubmit={handleSignIn}>
+                        <button className="btn btn-google btn-user btn-block">
+                          <i className="fab fa-google fa-fw"></i> Login with
+                          Google
+                        </button>
+                      </form>
                       <hr />
                       <div className="text-center">
                         <Link href="signup">

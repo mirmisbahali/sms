@@ -1,11 +1,14 @@
 import { useAuth } from "../context/AuthContext";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  const router = useRouter()
   const handleLogOut = async () => {
     try {
       await logout();
+      router.push("/")
     } catch (e) {
       console.log(e);
     }

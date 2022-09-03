@@ -1,10 +1,10 @@
 import React from "react";
 
-function UserDetails() {
+function UserDetails({Student_id, Name}) {
   return (
     <div className="row">
       <div className="col-xl-4 col-lg-5">
-        <UserCard />
+        <UserCard sid={Student_id} name={Name} />
       </div>
       <div className="col-xl-8 col-lg-7">
         <Details />
@@ -13,7 +13,7 @@ function UserDetails() {
   );
 }
 
-const UserCard = () => {
+const UserCard = ({sid, name}) => {
   return (
     <div className="card mb-4">
       <div className="card-body text-center">
@@ -23,8 +23,8 @@ const UserCard = () => {
           className="rounded-circle img-fluid"
           style={{ width: "150px" }}
         />
-        <h5 className="my-3">John</h5>
-        <p className="text-muted mb-1">PVS0001</p>
+        <h5 className="my-3">{name}</h5>
+        <p className="text-muted mb-1">{sid}</p>
       </div>
     </div>
   );

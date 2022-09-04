@@ -13,9 +13,9 @@ export async function getServerSideProps({ query }) {
 
   console.log(query);
   let { id } = query;
-  
-id++
-  const range = `Sheet1!A${id}:E${id}`;
+
+  id++;
+  const range = `Students!${id}:${id}`;
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: process.env.SHEET_ID,
     range,

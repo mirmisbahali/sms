@@ -27,7 +27,6 @@ function Enrollments() {
   return (
     <div className="accordion" id="accordionPanelsStayOpenExample">
       {courseList.map((item, i) => {
-        console.log(item);
         return <Enrollment key={i} {...item} />;
       })}
     </div>

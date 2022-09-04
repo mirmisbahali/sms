@@ -4,25 +4,26 @@ import Enrollments from "../../Components/Enrollments";
 import ComLog from "../../Components/ComLog";
 import Head from "next/head";
 
-export async function getServerSideProps({ query }) {
-  const auth = await google.auth.getClient({
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-  });
+export const getStaticPaths = async () => {
+  
+  const data = await getData('A', 'I')
+  const paths = data[0].map((i, index) => {
+    return {
+      params: {id: index.toString()}
+    }
+  })
 
-  const sheets = google.sheets({ version: "v4", auth });
+    return {
+      paths,
+      fallback: false
+    }
+};
 
-  console.log(query);
-  let { id } = query;
-
-  id++;
-  const range = `Students!${id}:${id}`;
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SHEET_ID,
-    range,
-  });
-  const [Student_id, Name, Course, Start_Date, End_Date] =
-    response.data.values[0];
-
+export async function getStaticProps(context) {
+  let id = context.params.id
+  id++
+  const data = await getData(id.toString(), id.toString())
+  const [Student_id, Name, Course, Start_Date, End_Date] = data[0]
   return {
     props: {
       Student_id,
@@ -32,6 +33,7 @@ export async function getServerSideProps({ query }) {
       End_Date,
     },
   };
+  
 }
 
 export default function Student({
@@ -60,4 +62,21 @@ export default function Student({
       </div>
     </>
   );
+}
+
+
+const getData = async (row, col) => {
+  const auth = await google.auth.getClient({
+    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+  });
+
+  const sheets = google.sheets({ version: "v4", auth });
+
+  const range = `Students!${row}:${col}`;
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: process.env.SHEET_ID,
+    range,
+  });
+
+  return response.data.values
 }

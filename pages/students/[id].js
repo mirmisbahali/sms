@@ -54,7 +54,7 @@ export default function Student({
       <UserDetails Student_id={Student_id} Name={Name} />
       <div className="row">
         <div className="col-xl-4 col-lg-5 scrollbar scrollbar-primary">
-          <ComLog />
+          <ComLog sid={Student_id} />
         </div>
         <div className="col-xl-8 col-lg-7">
           <Enrollments />
@@ -74,7 +74,7 @@ const getData = async (row, col) => {
 
   const range = `Students!${row}:${col}`;
   const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SHEET_ID,
+    spreadsheetId: process.env.NEXT_PUBLIC_SHEET_ID,
     range,
   });
 

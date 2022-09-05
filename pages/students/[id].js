@@ -74,6 +74,7 @@ const getData = async (row, col) => {
 
   const range = `Students!${row}:${col}`;
   const response = await sheets.spreadsheets.values.get({
+
     spreadsheetId: process.env.NEXT_PUBLIC_SHEET_ID,
     range,
   });

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
 import { useEffect } from "react";
 
-export default function login() {
+const login = () => {
   const { googleSignIn, user } = useAuth();
   const router = useRouter();
 
@@ -60,3 +60,4 @@ export default function login() {
     </>
   );
 }
+export default login
